@@ -1,8 +1,6 @@
 // compress:false
 
-@primary: #5d74d8;
-@secondary: #60c0e6;
-@black: #000;
+@import 'vars';
 
 html,
 body {
@@ -15,10 +13,12 @@ body {
   color: @black;
 }
 
-.title {
-  margin: 0;
-
-  font-size: 2rem;
-  color: @primary;
-  font-weight: 700;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+// Blocks
+@import 'blocks/title.less';
+@import 'blocks/btn.less';

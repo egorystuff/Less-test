@@ -1,0 +1,46 @@
+// main:../style.less
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5em 1em;
+
+  background-color: #ccc;
+  border-radius: @radius;
+
+  font-family: inherit;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+
+  transition: background 0.2s linear;
+
+  & + & {
+    margin-left: 1rem;
+  }
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    background-color: #726f6f;
+  }
+
+  &--primary {
+    background-color: @primary;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      background-color: darken(@primary, 15%);
+    }
+  }
+
+  &--secondary {
+    background-color: @secondary;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      background-color: lighten(@secondary, 15%);
+    }
+  }
+}
