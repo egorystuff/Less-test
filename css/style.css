@@ -15,8 +15,13 @@ body {
 .title {
   margin: 0;
   font-size: 2.5rem;
-  color: #5d74d8;
+  color: rgba(93, 116, 216, 0.5);
   font-weight: 700;
+}
+@media (max-width: 575px) {
+  .title {
+    font-size: 1.8rem;
+  }
 }
 .btn {
   display: inline-block;
@@ -33,6 +38,10 @@ body {
 .btn + .btn {
   margin-left: 1rem;
 }
+.disabled .btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .btn:focus,
 .btn:hover {
   outline: 0;
@@ -40,17 +49,43 @@ body {
 }
 .btn--primary {
   background-color: #5d74d8;
+  color: #000;
 }
 .btn--primary:focus,
 .btn--primary:hover {
-  outline: 0;
   background-color: #2d48bb;
 }
 .btn--secondary {
-  background-color: #60c0e6;
+  background-color: hsl(197, 73%, 64%);
+  color: #000;
 }
 .btn--secondary:focus,
 .btn--secondary:hover {
-  outline: 0;
-  background-color: #a2daf0;
+  background-color: hsl(197, 73%, 49%);
+}
+.btn--green {
+  background-color: #4ba75a;
+}
+.btn--green:focus,
+.btn--green:hover {
+  background-color: #33723e;
+}
+.post {
+  width: 400px;
+  height: 200px;
+  background: url('../images/bg.jpg') center no-repeat;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }

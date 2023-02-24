@@ -18,6 +18,11 @@
     margin-left: 1rem;
   }
 
+  .disabled & {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   &:focus,
   &:hover {
     outline: 0;
@@ -25,22 +30,14 @@
   }
 
   &--primary {
-    background-color: @primary;
-
-    &:focus,
-    &:hover {
-      outline: 0;
-      background-color: darken(@primary, 15%);
-    }
+    .btn(@primary);
   }
 
   &--secondary {
-    background-color: @secondary;
+    .btn(@secondary);
+  }
 
-    &:focus,
-    &:hover {
-      outline: 0;
-      background-color: lighten(@secondary, 15%);
-    }
+  &--green {
+    .btn(@success);
   }
 }
